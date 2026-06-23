@@ -5,7 +5,7 @@ import About from "./components/About";
 import Services from "./components/Services";
 import Work from "./components/Work";
 import Skills from "./components/Skills";
-import Contact from "./components/Contect";
+import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { useEffect, useState } from "react";
 import IntroAnimation from "./components/animations/IntroAnimations";
@@ -52,7 +52,7 @@ export default function Home() {
           <Contact isDarkMode={isDarkMode} />
           <Footer isDarkMode={isDarkMode} />
         </div>
-      )} 
+       )}  
     </>
   );
 }

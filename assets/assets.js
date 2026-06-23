@@ -76,39 +76,123 @@ export const assets = {
 
 
 export const workData = [
-  {
-    id: 1,
-    title: "E-Commerce Order Dashboard",
+ {
+  id: 1,
+
+  title: "EverCart — AI Powered Marketplace (Microservices)",
+
+  description:
+    "Production-ready AI-powered marketplace built with MERN and Microservices architecture featuring JWT authentication, real-time notifications, seller dashboard, AI shopping assistant, payments, and scalable deployment.",
+
+  image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8cxLaaQkpQGrymeq8Hjyb0n2RqT1ZWiQpcg&s",
+
+
+  gallery: [
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8cxLaaQkpQGrymeq8Hjyb0n2RqT1ZWiQpcg&s",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPi9aYojed8UIvZZoWXeo-BSVoF6qQHyYBKw&s",
+    "https://brightpixel.in/wp-content/uploads/2025/06/E-Commerce-Website.png",
+    "https://www.vhv.rs/dpng/d/521-5212074_project-e-commerce-system-development-process-hd-png.png",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoQeuE9O7NNp7Wv5Tu5lQwbQ0UKCGBjoWuwg&s",
+  ],
+
+  tags: [
+    "React",
+    "Node.js",
+    "MongoDB",
+    "Microservices",
+    "AWS",
+    "Redis",
+    "RabbitMQ",
+    "AI",
+  ],
+
+  demoUrl: "https://evercart-steel.vercel.app",
+
+  githubUrl:
+    "https://github.com/yourusername/evercart",
+
+  longDescription:
+    "EverCart is a full-scale AI-powered e-commerce platform developed using MERN Stack and Microservices Architecture. The system is divided into independent services including Authentication, Product, Cart, Order, Payment, Seller, Notification, and AI Buddy Service. Users can browse products, interact with an AI shopping assistant, place secure orders, manage seller stores, and receive real-time updates. The application is designed for scalability, maintainability, and production deployment.",
+
+  techStack: [
+    "React.js",
+    "Redux Toolkit",
+    "Tailwind CSS",
+    "Node.js",
+    "Express.js",
+    "MongoDB Atlas",
+    "Redis",
+    "RabbitMQ",
+    "JWT",
+    "Docker",
+    "AWS ECS",
+    "AWS ECR",
+    "AWS S3",
+    "Razorpay",
+    "LangChain",
+    "Google Gemini",
+    "REST APIs",
+    "CloudWatch",
+  ],
+
+  features: [
+    "Microservices architecture with API Gateway",
+    "JWT Authentication with Access + Refresh Tokens",
+    "Role Based Access Control (RBAC)",
+    "Google OAuth Login",
+    "AI Shopping Assistant using Gemini + LangChain",
+    "Real-time notifications and order updates",
+    "Seller dashboard for product management",
+    "Product search and filtering",
+    "Cart and checkout flow",
+    "Payment integration using Razorpay",
+    "Redis caching for performance optimization",
+    "RabbitMQ event-driven communication",
+    "Image uploads using AWS S3",
+    "Responsive UI with modern UX",
+    "Cloud deployment with Docker and AWS",
+  ],
+
+  highlight: {
+    name: "AIBuddyService",
+
     description:
-      "A real-time MERN dashboard with admin analytics, order tracking, and customer management powered by Chart.js and Socket.io.",
-    image:
-      "https://titanui.com/wp-content/uploads/2018/11/14/Clean-Web-Template-For-Fashion-E-commerce-Website.jpg",
-    tags: ["React", "Node.js", "Express.js", "MongoDB"],
-    demoUrl: "https://demo.example.com/dashboard",
-    githubUrl: "https://github.com/yourusername/ecommerce-dashboard",
+      "Implemented an AI shopping assistant using LangChain + Google Gemini capable of product recommendations, answering shopping queries, and improving user purchase experience through contextual conversations."
   },
-  {
-    id: 2,
-    title: "NextGen Portfolio Platform",
-    description:
-      "A blazing-fast developer portfolio built with Next.js, Framer Motion, and Tailwind CSS — optimized for SEO and responsive across all devices.",
-    image:
-      "https://cdn.dribbble.com/userupload/45438762/file/631d96e4cd17dff9c322daf08a65f99a.png?resize=400x0",
-    tags: ["Next.js", "Framer Motion", "Tailwind", "Vercel"],
-    demoUrl: "https://yourportfolio.com",
-    githubUrl: "https://github.com/yourusername/nextjs-portfolio",
+
+  architecture: [
+    "API Gateway",
+    "Auth Service",
+    "Product Service",
+    "Cart Service",
+    "Order Service",
+    "Payment Service",
+    "Notification Service",
+    "Seller Service",
+    "AI Buddy Service"
+  ],
+
+  metrics: {
+    services: "8+ Microservices",
+    apis: "40+ REST APIs",
+    auth: "JWT + Refresh Tokens",
+    deployment: "Docker + AWS"
   },
-  {
-    id: 3,
-    title: "Secure Task Management App",
-    description:
-      "A secure and modern task manager using JWT authentication, Express middleware, and a MySQL database with Sequelize ORM.",
-    image:
-      "https://cdn.dribbble.com/userupload/16490995/file/original-56d02cb50f191fabd8b089c1f09dd0e7.png?format=webp&resize=400x300&vertical=center",
-    tags: ["React", "Node.js", "Express.js", "MySQL"],
-    demoUrl: "https://demo.example.com/taskapp",
-    githubUrl: "https://github.com/yourusername/task-manager",
-  },
+
+  challenges: [
+    "Managing communication between multiple services",
+    "Implementing secure authentication across services",
+    "Handling distributed state and API routing",
+    "Optimizing response time using Redis caching"
+  ],
+
+  whyBuilt:
+    "I wanted to move beyond basic CRUD projects and build a production-level marketplace that demonstrates backend architecture, scalability, AI integration, and real-world deployment concepts.",
+
+  learnings:
+    "Built strong understanding of Microservices Architecture, API Gateway patterns, Docker deployment, Redis caching, event-driven systems with RabbitMQ, secure authentication, cloud deployment, and integrating LLM-powered experiences into real products."
+}
 ];
 
 export const serviceData = [
@@ -163,12 +247,12 @@ export const infoList = [
     title: "Experience",
     description: "6 months of internship experience as a MERN stack developer.",
   },
-  {
-    icon: assets.project_icon,
-    iconDark: assets.project_icon_dark,
-    title: "Projects",
-    description: "Built more than 5 projects",
-  },
+{
+  icon: assets.project_icon,
+  iconDark: assets.project_icon_dark,
+  title: "Freelance Work",
+  description: "Built and delivered 4+ client projects."
+}
 ];
 
 
@@ -238,5 +322,33 @@ export const experiences = [
       "Implemented JWT-based authentication and role-based authorization to secure application endpoints.",
     ],
     tags: ["Node.js", "Express.js", "MongoDB", "SQL", "REST APIs"],
+  },
+
+  {
+    id: 2,
+    role: "Freelance Backend Developer",
+    company: "Self Employed",
+    location: "Remote",
+    period: "Feb 2026 - Present",
+    duration: "Present",
+    type: "Freelance",
+
+    description:
+      "Delivered freelance web applications focused on backend architecture, REST APIs, authentication, and scalable systems.",
+
+    achievements: [
+      "Built and delivered 4+ client projects.",
+      "Developed secure authentication and API systems.",
+      "Integrated databases and optimized backend performance.",
+    ],
+
+    tags: [
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "REST APIs",
+      "JWT",
+      "Backend",
+    ],
   },
 ];
