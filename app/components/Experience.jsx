@@ -117,7 +117,7 @@ export default function ProfessionalJourney({ isDarkMode }) {
                 </div>
 
                 {/* Description */}
-                <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4 font-Ovo max-w-2xl">
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4 font-Ovo max-w-5xl">
                   {description}
                 </p>
 

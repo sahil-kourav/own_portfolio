@@ -74,125 +74,209 @@ export const assets = {
   right_arrow_bold_dark,
 };
 
-
 export const workData = [
- {
-  id: 1,
+  {
+    id: 1,
 
-  title: "EverCart — AI Powered Marketplace (Microservices)",
-
-  description:
-    "Production-ready AI-powered marketplace built with MERN and Microservices architecture featuring JWT authentication, real-time notifications, seller dashboard, AI shopping assistant, payments, and scalable deployment.",
-
-  image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8cxLaaQkpQGrymeq8Hjyb0n2RqT1ZWiQpcg&s",
-
-
-  gallery: [
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8cxLaaQkpQGrymeq8Hjyb0n2RqT1ZWiQpcg&s",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPi9aYojed8UIvZZoWXeo-BSVoF6qQHyYBKw&s",
-    "https://brightpixel.in/wp-content/uploads/2025/06/E-Commerce-Website.png",
-    "https://www.vhv.rs/dpng/d/521-5212074_project-e-commerce-system-development-process-hd-png.png",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoQeuE9O7NNp7Wv5Tu5lQwbQ0UKCGBjoWuwg&s",
-  ],
-
-  tags: [
-    "React",
-    "Node.js",
-    "MongoDB",
-    "Microservices",
-    "AWS",
-    "Redis",
-    "RabbitMQ",
-    "AI",
-  ],
-
-  demoUrl: "https://evercart-steel.vercel.app",
-
-  githubUrl:
-    "https://github.com/yourusername/evercart",
-
-  longDescription:
-    "EverCart is a full-scale AI-powered e-commerce platform developed using MERN Stack and Microservices Architecture. The system is divided into independent services including Authentication, Product, Cart, Order, Payment, Seller, Notification, and AI Buddy Service. Users can browse products, interact with an AI shopping assistant, place secure orders, manage seller stores, and receive real-time updates. The application is designed for scalability, maintainability, and production deployment.",
-
-  techStack: [
-    "React.js",
-    "Redux Toolkit",
-    "Tailwind CSS",
-    "Node.js",
-    "Express.js",
-    "MongoDB Atlas",
-    "Redis",
-    "RabbitMQ",
-    "JWT",
-    "Docker",
-    "AWS ECS",
-    "AWS ECR",
-    "AWS S3",
-    "Razorpay",
-    "LangChain",
-    "Google Gemini",
-    "REST APIs",
-    "CloudWatch",
-  ],
-
-  features: [
-    "Microservices architecture with API Gateway",
-    "JWT Authentication with Access + Refresh Tokens",
-    "Role Based Access Control (RBAC)",
-    "Google OAuth Login",
-    "AI Shopping Assistant using Gemini + LangChain",
-    "Real-time notifications and order updates",
-    "Seller dashboard for product management",
-    "Product search and filtering",
-    "Cart and checkout flow",
-    "Payment integration using Razorpay",
-    "Redis caching for performance optimization",
-    "RabbitMQ event-driven communication",
-    "Image uploads using AWS S3",
-    "Responsive UI with modern UX",
-    "Cloud deployment with Docker and AWS",
-  ],
-
-  highlight: {
-    name: "AIBuddyService",
+    title: "EverCart — Microservices-Based E-Commerce Platform",
 
     description:
-      "Implemented an AI shopping assistant using LangChain + Google Gemini capable of product recommendations, answering shopping queries, and improving user purchase experience through contextual conversations."
+      "Scalable e-commerce backend built with a microservices architecture — independent services for auth, products, orders, cart, payments, notifications, and seller management, with Redis caching, RabbitMQ messaging, and an automated CI/CD pipeline.",
+
+    image: "https://res.cloudinary.com/djmvmlwsg/image/upload/v1782377711/Screenshot_2026-06-25_141455_kxqxss.png",
+    gallery: [
+      "https://res.cloudinary.com/djmvmlwsg/image/upload/v1782377711/Screenshot_2026-06-25_141455_kxqxss.png",
+      "https://res.cloudinary.com/djmvmlwsg/image/upload/v1782377710/Screenshot_2026-06-25_140730_xymqsm.png",
+      "https://res.cloudinary.com/djmvmlwsg/image/upload/v1782377710/Screenshot_2026-06-25_141408_wfbmpw.png",
+      "https://res.cloudinary.com/djmvmlwsg/image/upload/v1782377710/Screenshot_2026-06-25_141318_ylhhq6.png",
+      "https://res.cloudinary.com/djmvmlwsg/image/upload/v1782377710/Screenshot_2026-06-25_141329_pfkrhp.png",
+      "https://res.cloudinary.com/djmvmlwsg/image/upload/v1782377711/Screenshot_2026-06-25_141703_jsbmop.png",
+      "https://res.cloudinary.com/djmvmlwsg/image/upload/v1782377711/Screenshot_2026-06-25_141846_lhv0xa.png",
+    ],
+
+    tags: [
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Microservices",
+      "AWS",
+      "Docker",
+      "Redis",
+      "RabbitMQ",
+      "Razorpay",
+      "JWT",
+      "CI/CD",
+    ],
+
+    demoUrl: "https://evercart-steel.vercel.app",
+    githubUrl: "https://github.com/sahil-kourav/evercart_marketplace.git",
+
+    longDescription:
+      "EverCart is a microservices-based e-commerce backend separating core business domains — Authentication, Products, Orders, Cart, Payments, Notifications, and Seller Management — into independent services behind a centralized API Gateway. The system is containerized with Docker, deployed on AWS, and supports automated deployments through a GitHub Actions CI/CD pipeline.",
+
+    techStack: [
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Redis",
+      "RabbitMQ",
+      "JWT",
+      "Docker",
+      "AWS (EC2)",
+      "Razorpay",
+      "REST APIs",
+      "GitHub Actions",
+    ],
+
+    features: [
+      "Microservices architecture with a centralized API Gateway",
+      "API Gateway handling request routing, authentication, authorization, and rate limiting",
+      "JWT-based authentication with refresh tokens and Role-Based Access Control (RBAC)",
+      "Used Redis for caching frequently accessed data to improve performance and reduce database load",
+      "RabbitMQ for asynchronous, event-driven communication between services",
+      "Razorpay integration for secure payment processing",
+      "Dockerized services deployed on AWS (EC2)",
+      "Automated CI/CD pipeline using GitHub Actions for streamlined deployment",
+    ],
+
+    highlight: {
+      name: "API Gateway",
+      description:
+        "Built a centralized API Gateway to handle routing, authentication, authorization, and rate limiting across all services — simplifying communication between clients and the underlying microservices.",
+    },
+
+    architecture: [
+      "API Gateway",
+      "Auth Service",
+      "Product Service",
+      "Cart Service",
+      "Order Service",
+      "Payment Service",
+      "Notification Service",
+      "Seller Service",
+    ],
+
+    metrics: {
+      services: "7 Microservices",
+      auth: "JWT Authentication with RBAC",
+      deployment: "Docker + AWS EC2 + GitHub Actions",
+      cicd: "GitHub Actions",
+    },
+
+    challenges: [
+      "Coordinating reliable communication between independent microservices",
+      "Implementing consistent, secure JWT-based authentication across all services",
+      "Integrating RabbitMQ for event-driven communication and ensuring message reliability",
+      "Setting up an automated CI/CD pipeline for consistent deployments",
+    ],
+
+    whyBuilt:
+      "I wanted to explore building a scalable backend system using microservices architecture, focusing on service separation, inter-service communication, and automated deployment pipelines.",
+
+    learnings:
+      "Built a strong understanding of microservices architecture, API Gateway patterns, Docker-based deployment, Redis caching, event-driven communication with RabbitMQ, secure JWT authentication, and setting up CI/CD pipelines with GitHub Actions.",
   },
+  {
+    id: 2,
 
-  architecture: [
-    "API Gateway",
-    "Auth Service",
-    "Product Service",
-    "Cart Service",
-    "Order Service",
-    "Payment Service",
-    "Notification Service",
-    "Seller Service",
-    "AI Buddy Service"
-  ],
+    title: "UpSkale AI — AI-Powered Career Preparation Platform",
 
-  metrics: {
-    services: "8+ Microservices",
-    apis: "40+ REST APIs",
-    auth: "JWT + Refresh Tokens",
-    deployment: "Docker + AWS"
+    description:
+      "AI-powered platform that analyzes a user's resume, job description, and profile to generate tailored interview questions, a resume-to-JD match score, skill gap analysis, and an ATS-friendly resume — plus an AI mock interview system with performance feedback and a credit-based usage model.",
+
+     image: "https://res.cloudinary.com/djmvmlwsg/image/upload/v1782376144/Screenshot_2026-06-25_135459_ipxj2w.png",
+
+    gallery: [
+      "https://res.cloudinary.com/djmvmlwsg/image/upload/v1782376144/Screenshot_2026-06-25_135459_ipxj2w.png",
+      "https://res.cloudinary.com/djmvmlwsg/image/upload/v1782376478/Screenshot_2026-06-25_140414_pbtaox.png",
+      "https://res.cloudinary.com/djmvmlwsg/image/upload/v1782376144/Screenshot_2026-06-25_135536_hgi6g7.png",
+      "https://res.cloudinary.com/djmvmlwsg/image/upload/v1782376145/Screenshot_2026-06-25_135717_zuwxd0.png",
+      "https://res.cloudinary.com/djmvmlwsg/image/upload/v1782376144/Screenshot_2026-06-25_135523_nzhbjp.png",
+      "https://res.cloudinary.com/djmvmlwsg/image/upload/v1782376144/Screenshot_2026-06-25_135558_rc6f7e.png"
+    ],
+
+    tags: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Google Gemini",
+      "OpenRouter",
+      "Razorpay",
+      "JWT",
+      "PDF Reports",
+    ],
+
+    demoUrl: "https://upskaleai.onrender.com",
+    githubUrl: "https://github.com/sahil-kourav/Upskale-Ai.git",
+
+    longDescription:
+      "UpSkale AI is an AI-powered career preparation platform. Users submit their resume, job description, and a self-description, and the platform uses Google Gemini to analyze the inputs, generate tailored interview questions, calculate a resume-to-JD match score, identify skill gaps, and produce a personalized preparation roadmap and ATS-friendly resume. A separate AI mock interview system, powered by OpenRouter, runs timed practice interviews across three difficulty levels and produces a performance dashboard scoring communication, correctness, and confidence, along with per-question feedback. Usage is managed through a credit-based system integrated with Razorpay for purchasing additional credits.",
+
+    techStack: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT",
+      "Google Gemini",
+      "OpenRouter",
+      "Razorpay",
+      "Puppeteer",
+      "REST APIs",
+      "Vercel",
+    ],
+
+    features: [
+      "AI-powered resume, JD, and self-description analysis using Google Gemini",
+      "Resume-to-JD match score and AI-based skill gap analysis",
+      "Personalized preparation roadmap and auto-generated ATS-friendly resume",
+      "AI mock interview system (via OpenRouter) with timed questions across three difficulty levels",
+      "Performance dashboard scoring communication, correctness, and confidence",
+      "Per-question AI feedback with strengths, improvement areas, and example responses",
+      "Downloadable PDF reports generated with Puppeteer",
+      "Interview history with saved past reports",
+      "Credit-based usage system with Razorpay integration for credit purchases",
+    ],
+
+    highlight: {
+      name: "AI Analysis Engine",
+      description:
+        "The core of UpSkale AI is the AI Analysis Engine, which uses Google Gemini to analyze user inputs (resume, job description, self-description) and generate tailored interview questions, a resume-to-JD match score, skill gap analysis, and a personalized preparation roadmap. This engine ensures that users receive actionable insights for career preparation.",
+    },
+
+    architecture: [
+      "React Frontend",
+      "Node.js + Express Backend",
+      "Auth Module",
+      "Resume, JD, self description Analysis Module (Gemini)",
+      "Mock Interview Module (OpenRouter)",
+      "PDF Report Generator",
+      "Mock Interview History Module",
+      "Credit & Payment Module (Razorpay)",
+      "Deployment (Vercel)",
+    ],
+
+    metrics: {
+      reports: "PDF Report Generation",
+      interviews: "AI Mock Interviews",
+      payments: "Razorpay Credit System",
+      deployment: "Vercel",
+    },
+
+    challenges: [
+      "Generating structured, consistent AI responses from resume/JD/self-description inputs",
+      "Designing a reliable PDF report generation pipeline with Puppeteer",
+      "Managing mock interview history and report persistence",
+      "Building a credit-based usage and billing flow with Razorpay",
+    ],
+
+    whyBuilt:
+      "I wanted to explore AI integration in a real-world application, combining LLMs with a full-stack web application to provide users with actionable career preparation insights and practice tools.",
+
+    learnings:
+      "Gained hands-on experience integrating LLMs (Google Gemini, OpenRouter) into a full-stack application, managing AI response consistency, generating dynamic PDF reports, and implementing a credit-based payment system with Razorpay.",
   },
-
-  challenges: [
-    "Managing communication between multiple services",
-    "Implementing secure authentication across services",
-    "Handling distributed state and API routing",
-    "Optimizing response time using Redis caching"
-  ],
-
-  whyBuilt:
-    "I wanted to move beyond basic CRUD projects and build a production-level marketplace that demonstrates backend architecture, scalability, AI integration, and real-world deployment concepts.",
-
-  learnings:
-    "Built strong understanding of Microservices Architecture, API Gateway patterns, Docker deployment, Redis caching, event-driven systems with RabbitMQ, secure authentication, cloud deployment, and integrating LLM-powered experiences into real products."
-}
 ];
 
 export const serviceData = [
@@ -211,7 +295,7 @@ export const serviceData = [
   {
     title: "Microservices & Backend Integration",
     description:
-    "Develop modular backend services and integrate third-party APIs, payment gateways, and cloud services into scalable applications.",
+      "Develop modular backend services and integrate third-party APIs, payment gateways, and cloud services into scalable applications.",
     link: "",
   },
   {
@@ -223,7 +307,7 @@ export const serviceData = [
   {
     title: "Cloud Deployment & Containerization",
     description:
-    "Deploy backend applications using Docker and manage cloud infrastructure on AWS (EC2, ECS, S3) and other hosting platforms.",
+      "Deploy backend applications using Docker and manage cloud infrastructure on AWS (EC2, ECS, S3) and other hosting platforms.",
     link: "",
   },
   {
@@ -247,14 +331,13 @@ export const infoList = [
     title: "Experience",
     description: "6 months of internship experience as a MERN stack developer.",
   },
-{
-  icon: assets.project_icon,
-  iconDark: assets.project_icon_dark,
-  title: "Freelance Work",
-  description: "Built and delivered 4+ client projects."
-}
+  {
+    icon: assets.project_icon,
+    iconDark: assets.project_icon_dark,
+    title: "Freelance Work",
+    description: "Built and delivered 3+ client projects.",
+  },
 ];
-
 
 export const toolsData = [
   assets.git,
@@ -268,23 +351,26 @@ export const categories = ["backend", "ai", "cloud", "frontend"];
 
 export const skills = [
   // ================= BACKEND =================
-  { name: "Node.js", level: 72, category: "backend" },
-  { name: "Express.js", level: 70, category: "backend" },
-  { name: "MongoDB", level: 68, category: "backend" },
-  { name: "SQL", level: 60, category: "backend" },
+  { name: "Node.js", level: 80, category: "backend" },
+  { name: "Express.js", level: 85, category: "backend" },
+  { name: "Rest APIs", level: 85, category: "backend" },
+  { name: "MongoDB", level: 70, category: "backend" },
+  { name: "SQL", level: 55, category: "backend" },
   { name: "WebSockets", level: 62, category: "backend" },
-  { name: "Redis", level: 60, category: "backend" },
+  { name: "Redis", level: 55, category: "backend" },
   { name: "Microservices Architecture", level: 65, category: "backend" },
   { name: "MCP Servers", level: 50, category: "backend" },
-  { name: "Jest", level: 58, category: "backend" },
+  { name: "JWT Authentication", level: 75, category: "backend" },
+  { name: "API Gateway", level: 60, category: "backend" },
+  { name: "RabbitMQ", level: 55, category: "backend" },
 
   // ================= CLOUD & DEVOPS =================
   { name: "Docker", level: 68, category: "cloud" },
+  { name: "CI/CD Pipelines", level: 60, category: "cloud" },
   { name: "AWS EC2", level: 65, category: "cloud" },
   { name: "AWS ECS", level: 60, category: "cloud" },
   { name: "AWS ECR", level: 60, category: "cloud" },
   { name: "AWS S3", level: 65, category: "cloud" },
-  { name: "CI/CD Pipelines", level: 60, category: "cloud" },
   { name: "DDoS Protection Basics", level: 50, category: "cloud" },
 
   // ================= AI & LLM =================
@@ -295,51 +381,35 @@ export const skills = [
   { name: "LangGraph", level: 45, category: "ai" },
   { name: "Groq AI", level: 50, category: "ai" },
   { name: "Google Gemini", level: 55, category: "ai" },
+  { name: "OpenRouter", level: 55, category: "ai" },
   { name: "Prompt Engineering", level: 65, category: "ai" },
 
-    // ================= FRONTEND =================
-  { name: "HTML5", level: 80, category: "frontend" },
-  { name: "CSS3", level: 75, category: "frontend" },
-  { name: "Tailwind CSS", level: 70, category: "frontend" },
+  // ================= FRONTEND =================
+  { name: "HTML5", level: 70, category: "frontend" },
+  { name: "CSS3", level: 65, category: "frontend" },
+  { name: "Tailwind CSS", level: 60, category: "frontend" },
   { name: "JavaScript (ES6+)", level: 75, category: "frontend" },
   { name: "React JS", level: 65, category: "frontend" },
 ];
 
-
 export const experiences = [
   {
     id: 1,
-    role: "MERN Stack Developer Intern",
-    company: "Affimintus Technologies",
-    location: "Indore",
-    period: "Jan 2024 - Jun 2024",
-    duration: "6 months",
-    type: "Internship",
-    description:
-      "Worked as a MERN Stack Developer Intern with primary focus on backend development. Built scalable REST APIs, implemented authentication systems, optimized database queries, and contributed to full-stack feature development using MongoDB, Express.js, React, and Node.js.",
-    achievements: [
-      "Designed and developed RESTful APIs using Node.js and Express.js for user management, product handling, and order processing.",
-      "Implemented JWT-based authentication and role-based authorization to secure application endpoints.",
-    ],
-    tags: ["Node.js", "Express.js", "MongoDB", "SQL", "REST APIs"],
-  },
-
-  {
-    id: 2,
-    role: "Freelance Backend Developer",
-    company: "Self Employed",
+    role: "Backend Developer",
+    company: "Self-Employed (Freelance)",
     location: "Remote",
-    period: "Feb 2026 - Present",
+    period: "Mar 2026 - Present",
     duration: "Present",
     type: "Freelance",
 
     description:
-      "Delivered freelance web applications focused on backend architecture, REST APIs, authentication, and scalable systems.",
+      "Backend Developer in a 3-member freelance team, building RESTful APIs and server-side services for multiple clients using Node.js, Express.js, and MongoDB.",
 
     achievements: [
-      "Built and delivered 4+ client projects.",
-      "Developed secure authentication and API systems.",
-      "Integrated databases and optimized backend performance.",
+      "Served as Backend Developer in a 3-member freelance team, delivering RESTful APIs and server-side services for 3+ clients.",
+      "Managed the backend project lifecycle — requirement gathering, development, testing, and deployment — coordinating with the team to ensure timely delivery.",
+      "Built authentication systems, third-party API integrations, and database schemas tailored to client needs.",
+      "Applied RESTful API design and performance optimization principles to build secure, scalable backend systems for client production use.",
     ],
 
     tags: [
@@ -348,7 +418,43 @@ export const experiences = [
       "MongoDB",
       "REST APIs",
       "JWT",
-      "Backend",
+      "Google OAuth",
+      "Digital Ocean",
+      "Vercel",
+      "Render",
+      "VPS Hosting",
+      "Razorpay",
+    ],
+  },
+  {
+    id: 2,
+    role: "MERN Stack Developer Intern",
+    company: "Affimintus Technologies Pvt. Ltd.",
+    location: "Indore, India",
+    period: "Sep 2025 - Mar 2026",
+    duration: "6 months",
+    type: "Internship",
+
+    description:
+      "Backend-focused MERN Stack intern building and maintaining backend services for multiple web apps as part of a development team.",
+
+    achievements: [
+      "Built and maintained backend services for multiple web apps using Node.js and Express.js as part of a development team.",
+      "Designed and developed RESTful APIs adhering to industry-standard best practices, ensuring smooth communication between frontend and backend systems.",
+      "Integrated third-party APIs and managed asynchronous data flows within application workflows.",
+      "Collaborated within a cross-functional team to deliver consistent, well-structured backend solutions across multiple projects.",
+    ],
+
+    tags: [
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "REST APIs",
+      "JWT",
+      "Google OAuth",
+      "Razorpay",
+      "Google Maps API",
+      "Cloudinary",
     ],
   },
 ];

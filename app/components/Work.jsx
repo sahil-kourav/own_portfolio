@@ -552,7 +552,7 @@ const Work = ({ isDarkMode }) => {
           </p>
         </div>
 
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-2 max-w-4xl mx-auto">
           {workData.map((project, index) => {
             const isHovered = hoveredIndex === index;
             const visibleTags = project.tags.slice(0, 3);
@@ -574,7 +574,7 @@ const Work = ({ isDarkMode }) => {
                   }
                 }}
                 className="group relative bg-white dark:bg-gray-900/50 rounded-2xl overflow-hidden
-                  border border-gray-200 dark:border-gray-800
+                  border border-gray-200 dark:border-gray-800 
                   shadow-sm hover:shadow-xl hover:shadow-black/5 dark:hover:shadow-black/30
                   hover:-translate-y-1.5 duration-500 cursor-pointer
                   focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600

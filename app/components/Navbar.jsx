@@ -1,171 +1,265 @@
+"use client";
+
 import { assets } from "@/assets/assets";
 import Image from "next/image";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
+import { Menu, X, Moon, Sun, ArrowUpRight } from "lucide-react";
+
+const navItems = [
+  { label: "Home", href: "#top" },
+  { label: "About", href: "#about" },
+  { label: "Skills", href: "#skills" },
+  { label: "Experience", href: "#experience" },
+  { label: "Services", href: "#services" },
+  { label: "Work", href: "#work" },
+];
 
 const Navbar = ({ isDarkMode, setIsDarkMode }) => {
   const [isScroll, setIsScroll] = useState(false);
-  const sideMenuRef = useRef();
-
-  const openMenu = () => {
-    sideMenuRef.current.style.transform = "translateX(-16rem)";
-  };
-  const closeMenu = () => {
-    sideMenuRef.current.style.transform = "translateX(16rem)";
-  };
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [active, setActive] = useState("Home");
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (scrollY > 50) {
-        setIsScroll(true);
-      } else {
-        setIsScroll(false);
-      }
-    });
+    const handleScroll = () => {
+      setIsScroll(window.scrollY > 20);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleClick = (label) => {
+    setActive(label);
+    setMenuOpen(false);
+  };
 
   return (
     <>
-      <div className="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden">
-        <Image src={assets.header_bg_color} alt="" className="w-full" />
+      {/* Background */}
+      <div className="fixed inset-x-0 top-0 -z-20 dark:hidden opacity-70">
+        <Image
+          src={assets.header_bg_color}
+          alt=""
+          className="w-full object-cover"
+        />
       </div>
 
+      {/* NAV */}
       <nav
-        className={`w-full fixed px-5 lg:px-[7%] py-4 flex
-        items-center justify-between mt-0 z-50 ${
-          isScroll
-            ? "bg-white/25 bg-opacity-50 backdrop-blur-lg shadow-sm dark:bg-darkTheme dark:shadow-white/20"
-            : ""
-        }`}
+        className={`fixed left-1/2 top-5 z-50
+        -translate-x-1/2 transition-all duration-500
+        
+        ${isScroll ? "w-[95%] lg:w-[88%]" : "w-[98%] lg:w-[92%]"}`}
       >
-        <h2
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="text-3xl sm:text-4xl font-extrabold tracking-tight cursor-pointer 
-             text-gray-900 dark:text-white select-none mr-36"
+        <div
+          className={`
+          rounded-[28px]
+          border
+          px-6
+          lg:px-10
+          py-1.5
+
+          ${
+            isScroll
+              ? `
+                bg-white/75
+                dark:bg-[#0E1016]/80
+                backdrop-blur-2xl
+                border-white/20
+                shadow-[0_20px_80px_rgba(0,0,0,.08)]
+              `
+              : `
+                bg-white/40
+                dark:bg-[#0E1016]/50
+                backdrop-blur-xl
+                border-white/10
+              `
+          }
+        `}
         >
-          Sahil<span className="text-[#ff2d55]">.</span>
-        </h2>
+          <div className="flex items-center justify-between">
+            {/* Logo */}
+            <button
+              onClick={() =>
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth",
+                })
+              }
+              className="group flex items-center gap-3"
+            >
+              <div>
+                <h2
+                  className="
+                  text-xl
+                  font-black
+                  dark:text-white
+                "
+                >
+                  Sahil
+                </h2>
 
-        <ul
-          className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 
-        ${
-          isScroll
-            ? ""
-            : "bg-white shadow-sm bg-opacity-50 dark:border dark:border-white/50 dark:bg-transparent"
-        }`}
-        >
-          <li>
-            <a className="font-Ovo" href="#top">
-              Home
-            </a>
-          </li>
-          <li>
-            <a className="font-Ovo" href="#about">
-              About me
-            </a>
-          </li>
-          <li>
-            <a className="font-Ovo" href="#skills">
-              Skills
-            </a>
-          </li>
-          <li>
-            <a className="font-Ovo" href="#experience">
-              Experience
-            </a>
-          </li>
-          <li>
-            <a className="font-Ovo" href="#services">
-              Services
-            </a>
-          </li>
-          <li>
-            <a className="font-Ovo" href="#work">
-              My Work
-            </a>
-          </li>
-        </ul>
+                <p
+                  className="
+                  text-xs
+                  text-gray-500
+                "
+                >
+                  Backend Developer
+                </p>
+              </div>
+            </button>
 
-        <div className="flex items-center gap-4">
-          <button>
-            <Image
-              src={isDarkMode ? assets.sun_icon : assets.moon_icon}
-              alt=""
-              className="w-6"
-              onClick={() => setIsDarkMode((prev) => !prev)}
-            />
-          </button>
+            {/* Desktop */}
+            <ul
+              className="
+              hidden
+              lg:flex
+              items-center
+              gap-2
+            "
+            >
+              {navItems.map((item) => (
+                <li key={item.label}>
+                  <a
+                    href={item.href}
+                    onClick={() => handleClick(item.label)}
+                    className={`
+                    relative
+                    px-5
+                    py-3
+                    rounded-full
+                    transition
+                    text-sm
 
-          <a
-            href="#contact"
-            className="hidden lg:flex items-center gap-3 px-10 py-1.5 border border-gray-500 rounded-full ml-4 font-Ovo
-            dark:border-white/50"
-          >
-            Let's Talk
-            <Image
-              src={isDarkMode ? assets.arrow_icon_dark : assets.arrow_icon}
-              alt=""
-              className="w-3"
-            />
-          </a>
+                    ${
+                      active === item.label
+                        ? `
+                          bg-black
+                          text-white
+                          dark:bg-white
+                          dark:text-black
+                        `
+                        : `
+                          hover:bg-black/5
+                          dark:hover:bg-white/10
+                        `
+                    }
+                  `}
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
 
-          <button className="block md:hidden ml-4 mr-3" onClick={openMenu}>
-            <Image
-              src={isDarkMode ? assets.menu_white : assets.menu_black}
-              alt=""
-              className="w-6"
-            />
-          </button>
+            {/* Right */}
+            <div className="flex items-center gap-3">
+              <button
+                onClick={() => setIsDarkMode((v) => !v)}
+                className="
+                h-11
+                w-11
+                rounded-full
+                border
+                flex
+                items-center
+                justify-center
+                hover:rotate-180
+                duration-500
+              "
+              >
+                {isDarkMode ? <Sun size={18} /> : <Moon size={18} />}
+              </button>
+
+              <a
+                href="#contact"
+                className="
+                hidden
+                md:flex
+                items-center
+                gap-2
+                px-6
+                py-2
+                rounded-full
+                text-gray-800
+                dark:text-white
+                font-semibold
+                hover:scale-105
+                duration-300
+              "
+              >
+                Let's Talk
+                <ArrowUpRight size={18} />
+              </a>
+
+              {/* Mobile */}
+              <button onClick={() => setMenuOpen(true)} className="lg:hidden">
+                <Menu />
+              </button>
+            </div>
+          </div>
         </div>
 
-        {/* --------- mobile menu --------- */}
+        {/* Mobile Menu */}
 
-        <ul
-          ref={sideMenuRef}
-          className="flex md:hidden flex-col text-md gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 dark:bg-darkHover dark:text-white"
+        <div
+          className={`
+          fixed
+          inset-0
+          transition
+
+          ${menuOpen ? "visible" : "invisible"}
+        `}
         >
-          <div className="absolute right-6 top-6" onClick={closeMenu}>
-            <Image
-              src={isDarkMode ? assets.close_white : assets.close_black}
-              alt=""
-              className="w-5 cursor-pointer"
-            />
+          <div
+            className="
+            absolute
+            inset-0
+            bg-black/40
+          "
+            onClick={() => setMenuOpen(false)}
+          />
+
+          <div
+            className={`
+            absolute
+            right-0
+            top-0
+            h-screen
+            w-[300px]
+            bg-white
+            dark:bg-[#101218]
+            p-8
+
+            transition-all
+
+            ${menuOpen ? "translate-x-0" : "translate-x-full"}
+          `}
+          >
+            <button onClick={() => setMenuOpen(false)} className="mb-10">
+              <X />
+            </button>
+
+            <ul className="space-y-6">
+              {navItems.map((item) => (
+                <li key={item.label}>
+                  <a
+                    href={item.href}
+                    onClick={() => handleClick(item.label)}
+                    className="
+                    text-lg
+                    font-medium
+                  "
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
-          <li>
-            <a className="font-Ovo" href="#top" onClick={closeMenu}>
-              Home
-            </a>
-          </li>
-          <li>
-            <a className="font-Ovo" href="#about" onClick={closeMenu}>
-              About me
-            </a>
-          </li>
-          <li>
-            <a className="font-Ovo" href="#services" onClick={closeMenu}>
-              Services
-            </a>
-          </li>
-          <li>
-            <a className="font-Ovo" href="#skills" onClick={closeMenu}>
-              Skills
-            </a>
-          </li>
-          <li>
-            <a className="font-Ovo" href="#experience" onClick={closeMenu}>
-              Experience
-            </a>
-          </li>
-          <li>
-            <a className="font-Ovo" href="#work" onClick={closeMenu}>
-              My Work
-            </a>
-          </li>
-          <li>
-            <a className="font-Ovo" href="#contact" onClick={closeMenu}>
-              Let's Talk
-            </a>
-          </li>
-        </ul>
+        </div>
       </nav>
     </>
   );

@@ -3,14 +3,11 @@ import React, { useState, useEffect } from "react";
 import { assets } from "@/assets/assets";
 import { motion } from "framer-motion";
 
-
 const roles = [
   "Backend Developer",
   "Node.js Developer",
-  "MERN Stack Developer",
-  "Full Stack Developer",
+  "Backend Focused MERN Developer",
 ];
-
 
 const Header = () => {
   const [roleIndex, setRoleIndex] = useState(0);
@@ -89,7 +86,7 @@ const Header = () => {
           </a>
 
           <a
-            href="/sample-resume.pdf"
+            href="/Sahil_Kourav_Nodejs_Developer.pdf"
             download
             className="px-24 md:px-14 py-2 rounded-full border border-gray-500 bg-white dark:text-black flex items-center gap-2"
           >
