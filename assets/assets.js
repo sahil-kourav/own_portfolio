@@ -81,9 +81,10 @@ export const workData = [
     title: "EverCart — Microservices-Based E-Commerce Platform",
 
     description:
-      "Scalable e-commerce backend built with a microservices architecture — independent services for auth, products, orders, cart, payments, notifications, and seller management, with Redis caching, RabbitMQ messaging, and an automated CI/CD pipeline.",
+      "Scalable e-commerce backend built with a microservices architecture — independent services for auth, products, orders, cart, payments, notifications, and seller management, with RabbitMQ messaging and an automated CI/CD pipeline.",
 
-    image: "https://res.cloudinary.com/djmvmlwsg/image/upload/v1782377711/Screenshot_2026-06-25_141455_kxqxss.png",
+    image:
+      "https://res.cloudinary.com/djmvmlwsg/image/upload/v1782377711/Screenshot_2026-06-25_141455_kxqxss.png",
     gallery: [
       "https://res.cloudinary.com/djmvmlwsg/image/upload/v1782377711/Screenshot_2026-06-25_141455_kxqxss.png",
       "https://res.cloudinary.com/djmvmlwsg/image/upload/v1782377710/Screenshot_2026-06-25_140730_xymqsm.png",
@@ -101,7 +102,6 @@ export const workData = [
       "Microservices",
       "AWS",
       "Docker",
-      "Redis",
       "RabbitMQ",
       "Razorpay",
       "JWT",
@@ -118,7 +118,6 @@ export const workData = [
       "Node.js",
       "Express.js",
       "MongoDB",
-      "Redis",
       "RabbitMQ",
       "JWT",
       "Docker",
@@ -132,7 +131,6 @@ export const workData = [
       "Microservices architecture with a centralized API Gateway",
       "API Gateway handling request routing, authentication, authorization, and rate limiting",
       "JWT-based authentication with refresh tokens and Role-Based Access Control (RBAC)",
-      "Used Redis for caching frequently accessed data to improve performance and reduce database load",
       "RabbitMQ for asynchronous, event-driven communication between services",
       "Razorpay integration for secure payment processing",
       "Dockerized services deployed on AWS (EC2)",
@@ -174,7 +172,7 @@ export const workData = [
       "I wanted to explore building a scalable backend system using microservices architecture, focusing on service separation, inter-service communication, and automated deployment pipelines.",
 
     learnings:
-      "Built a strong understanding of microservices architecture, API Gateway patterns, Docker-based deployment, Redis caching, event-driven communication with RabbitMQ, secure JWT authentication, and setting up CI/CD pipelines with GitHub Actions.",
+      "Built a strong understanding of microservices architecture, API Gateway patterns, Docker-based deployment, event-driven communication with RabbitMQ, secure JWT authentication, and setting up CI/CD pipelines with GitHub Actions.",
   },
   {
     id: 2,
@@ -184,7 +182,8 @@ export const workData = [
     description:
       "AI-powered platform that analyzes a user's resume, job description, and profile to generate tailored interview questions, a resume-to-JD match score, skill gap analysis, and an ATS-friendly resume — plus an AI mock interview system with performance feedback and a credit-based usage model.",
 
-     image: "https://res.cloudinary.com/djmvmlwsg/image/upload/v1782376144/Screenshot_2026-06-25_135459_ipxj2w.png",
+    image:
+      "https://res.cloudinary.com/djmvmlwsg/image/upload/v1782376144/Screenshot_2026-06-25_135459_ipxj2w.png",
 
     gallery: [
       "https://res.cloudinary.com/djmvmlwsg/image/upload/v1782376144/Screenshot_2026-06-25_135459_ipxj2w.png",
@@ -192,7 +191,7 @@ export const workData = [
       "https://res.cloudinary.com/djmvmlwsg/image/upload/v1782376144/Screenshot_2026-06-25_135536_hgi6g7.png",
       "https://res.cloudinary.com/djmvmlwsg/image/upload/v1782376145/Screenshot_2026-06-25_135717_zuwxd0.png",
       "https://res.cloudinary.com/djmvmlwsg/image/upload/v1782376144/Screenshot_2026-06-25_135523_nzhbjp.png",
-      "https://res.cloudinary.com/djmvmlwsg/image/upload/v1782376144/Screenshot_2026-06-25_135558_rc6f7e.png"
+      "https://res.cloudinary.com/djmvmlwsg/image/upload/v1782376144/Screenshot_2026-06-25_135558_rc6f7e.png",
     ],
 
     tags: [

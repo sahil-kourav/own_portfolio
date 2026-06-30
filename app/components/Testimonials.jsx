@@ -6,7 +6,7 @@ import { motion, useReducedMotion } from "framer-motion";
 const TESTIMONIALS = [
   {
     name: "Ananya Rao",
-    role: "Product Manager, Affimintus Technologies",
+    role: "Product Manager",
     quote:
       "Sahil picked up our half-built MERN app and shipped the missing pieces in two weeks flat. Communication was clear the whole way — no surprises, no scope creep.",
     rating: 5,
@@ -23,7 +23,7 @@ const TESTIMONIALS = [
   },
   {
     name: "Devendra Choudhary",
-    role: "Senior Developer, Affimintus Technologies",
+    role: "Senior Developer",
     quote:
       "Joined our team for a six-month sprint and left the codebase cleaner than he found it. Tests included, which is rarer than it should be.",
     rating: 5,
@@ -31,7 +31,7 @@ const TESTIMONIALS = [
   },
   {
     name: "Anil Kumar",
-    role: "Voice Support Executive, Affimintus Technologies",
+    role: "Voice Support Executive",
     quote:
       "I'm not technical, and he never once made me feel behind. He just built the thing, explained it in plain English, and shipped on time.",
     rating: 5,
@@ -130,15 +130,12 @@ const Testimonials = () => {
     : { hidden: { opacity: 0, y: 16 }, show: { opacity: 1, y: 0 } };
 
   return (
-    <section id="testimonials" className="px-[7%] py-24 sm:py-28 bg-white dark:bg-transparent">
+    <section
+      id="testimonials"
+      className="px-[7%] py-24 sm:py-28 bg-white dark:bg-transparent"
+    >
       <div className="max-w-6xl mx-auto">
-        {/* Header Section — mirrors the badge / eyebrow / heading / subheading
-            pattern used in Contact, so the two sections read as one system */}
         <div className="text-center mb-14 sm:mb-16">
-
-
-    
-
           <h2 className="text-4xl sm:text-5xl font-Ovo text-gray-800 dark:text-white leading-tight">
             What clients are saying<span className="text-[#ff2d55]">.</span>
           </h2>
