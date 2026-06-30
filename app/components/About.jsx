@@ -73,7 +73,7 @@ const About = ({ isDarkMode }) => {
               
               <Image
                 src={assets.user_image}
-                alt="Sahil Kourav - Full Stack Developer"
+                alt="Sahil Kourav - Backend Developer"
                 className="w-full rounded-3xl relative z-10 shadow-xl border border-gray-200 dark:border-gray-700"
               />
             </div>

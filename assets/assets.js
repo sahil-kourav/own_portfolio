@@ -328,7 +328,7 @@ export const infoList = [
     icon: assets.edu_icon,
     iconDark: assets.edu_icon_dark,
     title: "Experience",
-    description: "6 months of internship experience as a MERN stack developer.",
+    description: "6 months of internship experience as a Backend developer intern.",
   },
   {
     icon: assets.project_icon,
@@ -417,6 +417,10 @@ export const experiences = [
       "MongoDB",
       "REST APIs",
       "JWT",
+      "Third-party API Integration",
+      "Payment Gateway Integration",
+      "Clodinary",
+      "ImageKit",
       "Google OAuth",
       "Digital Ocean",
       "Vercel",
@@ -427,7 +431,7 @@ export const experiences = [
   },
   {
     id: 2,
-    role: "MERN Stack Developer Intern",
+    role: "Backend Developer Intern",
     company: "Affimintus Technologies Pvt. Ltd.",
     location: "Indore, India",
     period: "Sep 2025 - Mar 2026",
@@ -435,7 +439,7 @@ export const experiences = [
     type: "Internship",
 
     description:
-      "Backend-focused MERN Stack intern building and maintaining backend services for multiple web apps as part of a development team.",
+      "Backend developer intern building and maintaining backend services for multiple web apps as part of a development team.",
 
     achievements: [
       "Built and maintained backend services for multiple web apps using Node.js and Express.js as part of a development team.",
@@ -452,8 +456,9 @@ export const experiences = [
       "JWT",
       "Google OAuth",
       "Razorpay",
-      "Google Maps API",
+      "Google Maps",
       "Cloudinary",
+      "ImageKit"
     ],
   },
 ];
